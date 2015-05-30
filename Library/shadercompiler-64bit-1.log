@@ -1,6 +1,7 @@
 Base path: /Applications/Unity/Unity.app/Contents
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1983136512
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2108715792
 Cmd: getPlatforms
+<<<<<<< HEAD
 Cmd: preprocess
   insize=445 outsize=445 ok=1
 Cmd: compileSnippet
@@ -67,3 +68,9 @@ Cmd: compileSnippet
   api=0 type=0 insize=934 outsize=6257 kw=DIRECTIONAL SHADOWS_OFF _NORMALMAP ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=934 outsize=6 kw=DIRECTIONAL SHADOWS_OFF _NORMALMAP ok=1
+=======
+Cmd: compileSnippet
+  api=0 type=0 insize=1051 outsize=569 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1051 outsize=6 kw= ok=1
+>>>>>>> a05c404be76c970705e06244402a150b01040e28
