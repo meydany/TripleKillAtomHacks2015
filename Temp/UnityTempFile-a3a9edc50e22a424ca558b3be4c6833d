@@ -15,13 +15,12 @@
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/BlackBerryPlayer/UnityEditor.BB10.Extensions.dll'
--r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/STVPlayer/STVPlayer/UnityEditor.SamsungTV.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
--define:UNITY_5_0_2
+-define:UNITY_5_0_1
 -define:UNITY_5_0
 -define:UNITY_5
 -define:ENABLE_LICENSE_RENAME
