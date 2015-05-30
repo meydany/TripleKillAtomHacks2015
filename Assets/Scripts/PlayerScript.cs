@@ -9,11 +9,8 @@ public class PlayerScript : MonoBehaviour {
 	private float speed = 3f;
 	private float step;
 
-	public int score;
-
 	// Use this for initialization
 	void Start () {
-		score = 0;
 	}
 	
 	// Update is called once per frame
@@ -25,9 +22,8 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(){
-		score += 1;
 		Destroy(GameObject.FindGameObjectWithTag("Target"));
-		print (score);
+		GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (1);
 	}
 
 	void moveToPosition(Vector3 newPosition) {
