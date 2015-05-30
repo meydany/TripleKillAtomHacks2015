@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
 		}
 		else if (collision.gameObject.tag == "Target") {
 			Destroy (GameObject.FindGameObjectWithTag ("Target"));
-			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (5);
+			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (2);
 		}
 		else if (collision.gameObject.tag == "enemy"){
 			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().removeScore(1);
