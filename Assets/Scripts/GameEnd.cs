@@ -23,6 +23,10 @@ public class GameEnd : MonoBehaviour {
 		ScoreKeeper.GetComponent<ScoreKeeper> ().score = GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().score;
 		DontDestroyOnLoad (ScoreKeeper);
 		ScoreKeeper.tag = "ScoreKeeper";
-		Application.LoadLevel("GameOver");
+		if (Application.loadedLevelName == "SinglePlayerScene") {
+			Application.LoadLevel ("SinglePlayerGameOver");
+		} else {
+			Application.LoadLevel ("MultiplayerGameOver");
+		}
 	}
 }
