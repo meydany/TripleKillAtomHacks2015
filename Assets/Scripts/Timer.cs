@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		TimeLeft = 10f;
+		TimeLeft = 30f;
 		TimeLeft += 1f;
 		
 		TimerText = GameObject.FindGameObjectWithTag ("TimerText");

@@ -20,7 +20,6 @@ public class MultiplayerConnection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (ConnectInUpdate && AutoConnect && !PhotonNetwork.connected) {
 			ConnectInUpdate = false;
 
@@ -30,8 +29,8 @@ public class MultiplayerConnection : MonoBehaviour {
 				PhotonNetwork.sendRateOnSerialize = 10;
 			}
 		}
-		if(PhotonNetwork.room != null && PhotonNetwork.room.playerCount == PhotonNetwork.room.maxPlayers) {
-			options.isOpen = true;
+		if (PhotonNetwork.room.playerCount < 2) {
+			gameObject.GetComponent<Timer>().TimeLeft = 31f;
 		}
 	}
 
