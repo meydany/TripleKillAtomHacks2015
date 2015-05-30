@@ -43,7 +43,6 @@ public class MultiplayerConnection : MonoBehaviour {
 		if (PhotonNetwork.JoinRandomRoom ()) {
 			print ("Failed, creating room");
 			PhotonNetwork.CreateRoom (null, options, null);
-			gameObject.GetComponent<MultiplayerStartup>().setOurPLayer();
 		}
 	}
 	public void OnJoinedRoom() {

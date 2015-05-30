@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class MultiplayerPlayer : MonoBehaviour {
-	
+
+	private GameObject circle;
+
 	private Vector3 newPosition;
 	private Vector3 currentPosition;
 	
@@ -53,12 +55,16 @@ public class MultiplayerPlayer : MonoBehaviour {
 
 	[RPC]
 	void moveToPosition(Vector3 newPosition) {
-		print (PhotonNetwork.isMasterClient);
+		if (PhotonNetwork.isMasterClient) {
+			circle = GameObject.FindGameObjectWithTag ("clientPlayer");
+		} else {
+			circle = GameObject.FindGameObjectWithTag ("serverPlayer");
+		}
 		currentPosition = gameObject.transform.position;
 		
 		float xDifference = newPosition.x - currentPosition.x;
 		float yDifference = newPosition.y - currentPosition.y;
 		
-		gameObject.GetComponent<Rigidbody> ().velocity = new Vector3 (xDifference, yDifference, 0);
+		circle.GetComponent<Rigidbody> ().velocity = new Vector3 (xDifference, yDifference, 0);
 	}
 }

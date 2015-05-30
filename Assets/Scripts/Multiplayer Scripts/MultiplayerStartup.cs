@@ -20,13 +20,10 @@ public class MultiplayerStartup : MonoBehaviour {
 		if (!instantiatedObjects && PhotonNetwork.masterClient != null) {
 			ourPlayer = (GameObject) PhotonNetwork.Instantiate ("MultiplayerPlayer", new Vector3 (0, 0, 0), Quaternion.identity,0, null);
 		}
-		if (ourPlayer.tag != null) {
+		if (PhotonNetwork.isMasterClient) {
 			ourPlayer.tag = "clientPlayer";
+		} else {
+			ourPlayer.tag = "serverPlayer";
 		}
 	}
-
-	public void setOurPLayer() {
-		ourPlayer.tag = "serverPlayer";
-	}
-	
 }
