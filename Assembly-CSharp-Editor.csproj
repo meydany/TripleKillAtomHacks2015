@@ -71,6 +71,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
+<<<<<<< HEAD
  <HintPath>/Users/yolimeydan/Documents/AtomHacks2015/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
@@ -78,6 +79,15 @@
  </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>/Users/yolimeydan/Documents/AtomHacks2015/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+=======
+ <HintPath>/Users/oranluzon/AtomHacks2015/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="Photon3Unity3D">
+ <HintPath>/Users/oranluzon/AtomHacks2015/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>/Users/oranluzon/AtomHacks2015/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+>>>>>>> f466778e00a6f1fb6a1f063817ee18e3b8080780
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
