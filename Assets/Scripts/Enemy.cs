@@ -13,13 +13,23 @@ public class Enemy : MonoBehaviour {
 	
 	private Vector3 enemyPos;
 
+	private float randomSide;
+	private SpawnSide side;
 	
 	// Use this for initialization
 	void Start () {
 		randomXSpeed = Random.Range (1f, 3f);
 		randomYSpeed = Random.Range (-2f, 2f);
 
+		randomSide = Random.Range (0f, 2f);
 
+		if (randomSide < 1) {
+			side = SpawnSide.LEFT;
+			transform.position = new Vector3(-(Camera.main.orthographicSize * Camera.main.aspect + (GetComponent<Renderer>().bounds.size.x /2)), Random.Range(-(Camera.main.orthographicSize), Camera.main.orthographicSize), 0);
+		} else {
+			side = SpawnSide.RIGHT;
+			transform.position = new Vector3((Camera.main.orthographicSize * Camera.main.aspect + (GetComponent<Renderer>().bounds.size.x /2)), Random.Range(-(Camera.main.orthographicSize), Camera.main.orthographicSize), 0);
+		}
 	}
 	
 	// Update is called once per frame
