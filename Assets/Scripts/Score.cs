@@ -26,7 +26,6 @@ public class Score : MonoBehaviour {
 
 	public void removeScore(int points){
 		score -= points;
-		print ("1");
 		if (score < 0){
 			print ("2");
 			score = 0;
