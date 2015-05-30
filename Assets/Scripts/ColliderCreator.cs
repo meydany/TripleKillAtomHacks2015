@@ -30,11 +30,19 @@ public class ColliderCreator : MonoBehaviour {
 
 	void createWalls(){
 		float sideLimits = Camera.main.orthographicSize * Camera.main.aspect + (rightWall.GetComponent<Renderer> ().bounds.size.x / 2);
+
 		rightWall.transform.position = new Vector3 (sideLimits, 0, 0);
-		rightWall.transform.localScale = new Vector3(5, 0, 0);
+		rightWall.transform.localScale = new Vector3(1, Camera.main.orthographicSize * 2, 1);
 
 		leftWall.transform.position = new Vector3 (-sideLimits, 0, 0);
+		leftWall.transform.localScale = new Vector3(1, Camera.main.orthographicSize * 2, 1);
 
-		//float topLimit = Camera.main.orthographicSize + 
+		float topLimit = Camera.main.orthographicSize + topWall.GetComponent<Renderer> ().bounds.size.y / 2;
+
+		topWall.transform.position = new Vector3 (0, topLimit, 0);
+		topWall.transform.localScale = new Vector3(Camera.main.orthographicSize * Camera.main.aspect * 2, 1, 1);
+
+		botWall.transform.position = new Vector3 (0, -topLimit, 0);
+		botWall.transform.localScale = new Vector3(Camera.main.orthographicSize * Camera.main.aspect * 2, 1, 1);
 	}
 }
