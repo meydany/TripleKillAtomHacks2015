@@ -9,11 +9,8 @@ public class Player : MonoBehaviour {
 	private float speed = 3f;
 	private float step;
 
-	public int score;
-
 	// Use this for initialization
 	void Start () {
-		score = 0;
 	}
 	
 	// Update is called once per frame
@@ -24,6 +21,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+<<<<<<< HEAD:Assets/Scripts/Player.cs
 	void OnTriggerEnter(Collider collision){
 		print(collision.gameObject.name);
 		if (collision.gameObject.tag == "leftWall" || collision.gameObject.tag == "rightWall" || collision.gameObject.tag == "topWall" || collision.gameObject.tag == "botWall") {
@@ -33,6 +31,11 @@ public class Player : MonoBehaviour {
 			Destroy(GameObject.FindGameObjectWithTag("Target"));
 		}
 
+=======
+	void OnTriggerEnter(){
+		Destroy(GameObject.FindGameObjectWithTag("Target"));
+		GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (1);
+>>>>>>> f0f437e09585f0d934aab97b01a9a58d39ab0e45:Assets/Scripts/PlayerScript.cs
 	}
 
 	void moveToPosition(Vector3 newPosition) {

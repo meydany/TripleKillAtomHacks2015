@@ -1,19 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScript.cs">
     <Files>
-<<<<<<< Updated upstream
       <File FileName="Assets/Scripts/Enemy.cs" Line="51" Column="18" />
-      <File FileName="Assets/Scripts/EnemyManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyManager.cs" Line="22" Column="1" />
       <File FileName="Assets/Scripts/StartUp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerScript.cs" Line="36" Column="17" />
-      <File FileName="Assets/Scripts/TargetCreation.cs" Line="20" Column="24" />
-=======
-      <File FileName="Assets/Scripts/ColliderCreator.cs" Line="22" Column="17" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="47" Column="30" />
-      <File FileName="Assets/Scripts/EnemyManager.cs" Line="11" Column="42" />
-      <File FileName="Assets/Scripts/PlayerScript.cs" Line="19" Column="1" />
->>>>>>> Stashed changes
+      <File FileName="Assets/Scripts/PlayerScript.cs" Line="26" Column="84" />
+      <File FileName="Assets/Scripts/TargetCreation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Score.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="13" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
