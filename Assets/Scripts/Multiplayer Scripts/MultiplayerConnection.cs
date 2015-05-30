@@ -26,6 +26,8 @@ public class MultiplayerConnection : MonoBehaviour {
 
 			if(PhotonNetwork.ConnectUsingSettings ("v1.0")) {
 				print("Connection formed");
+				PhotonNetwork.sendRate = 20;
+				PhotonNetwork.sendRateOnSerialize = 10;
 			}
 		}
 		if(PhotonNetwork.room != null && PhotonNetwork.room.playerCount == PhotonNetwork.room.maxPlayers) {
