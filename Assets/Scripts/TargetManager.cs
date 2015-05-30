@@ -22,4 +22,5 @@ public class TargetManager : MonoBehaviour {
 		                      Random.Range (-(Camera.main.orthographicSize - targetPrefab.GetComponent<Renderer>().bounds.size.y/2), Camera.main.orthographicSize - targetPrefab.GetComponent<Renderer>().bounds.size.y/2), 0);
 		Instantiate(targetPrefab, newPos, Quaternion.identity);
 	}
+
 }

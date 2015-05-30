@@ -28,7 +28,7 @@ public class MultiplayerConnection : MonoBehaviour {
 				print("Connection formed");
 			}
 		}
-		if( PhotonNetwork.room != null && PhotonNetwork.room.playerCount == PhotonNetwork.room.maxPlayers) {
+		if(PhotonNetwork.room != null && PhotonNetwork.room.playerCount == PhotonNetwork.room.maxPlayers) {
 			options.isOpen = true;
 		}
 	}

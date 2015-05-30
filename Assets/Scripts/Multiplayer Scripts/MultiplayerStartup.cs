@@ -2,18 +2,22 @@
 using System.Collections;
 
 public class MultiplayerStartup : MonoBehaviour {
-	
-	public GameObject playerPrefab;
-	public GameObject targetPrefab;
-	
+
+	public bool instantiatedObjects = false;
+
 	// Use this for initialization
 	void Start () {
-		Instantiate (playerPrefab, new Vector3 (0, 0, 0), Quaternion.identity);
-		Instantiate (targetPrefab, new Vector3 (0, 2, 0), Quaternion.identity);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void OnJoinedRoom() {
+		if (!instantiatedObjects && PhotonNetwork.masterClient != null) {
+			PhotonNetwork.Instantiate ("MultiplayerPlayer", new Vector3 (0, 0, 0), Quaternion.identity,0, null);
+		}
 	}
 }
