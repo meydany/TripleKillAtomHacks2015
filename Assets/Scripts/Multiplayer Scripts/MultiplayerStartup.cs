@@ -2,17 +2,18 @@
 using System.Collections;
 
 public class MultiplayerStartup : MonoBehaviour {
-
-	private TypedLobby lobby;
-
+	
+	public GameObject playerPrefab;
+	public GameObject targetPrefab;
+	
 	// Use this for initialization
 	void Start () {
-		PhotonNetwork.ConnectUsingSettings ("v1.0");
-
+		Instantiate (playerPrefab, new Vector3 (0, 0, 0), Quaternion.identity);
+		Instantiate (targetPrefab, new Vector3 (0, 2, 0), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 }

@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\GameEnd.cs" />
      <Compile Include="Assets\Scripts\GameOverScene.cs" />
+     <Compile Include="Assets\Scripts\Multiplayer Scripts\MultiplayerConnection.cs" />
      <Compile Include="Assets\Scripts\Multiplayer Scripts\MultiplayerStartup.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
