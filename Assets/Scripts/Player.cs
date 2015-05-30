@@ -20,22 +20,15 @@ public class Player : MonoBehaviour {
 			moveToPosition (newPosition);
 		}
 	}
-
-<<<<<<< HEAD:Assets/Scripts/Player.cs
+	
 	void OnTriggerEnter(Collider collision){
-		print(collision.gameObject.name);
+		print (collision.gameObject.name);
 		if (collision.gameObject.tag == "leftWall" || collision.gameObject.tag == "rightWall" || collision.gameObject.tag == "topWall" || collision.gameObject.tag == "botWall") {
 			print (collision.gameObject.name);
-		} else if(collision.gameObject.tag == "Target"){
-			score += 1;
-			Destroy(GameObject.FindGameObjectWithTag("Target"));
+		} else if (collision.gameObject.tag == "Target") {
+			Destroy (GameObject.FindGameObjectWithTag ("Target"));
+			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (1);
 		}
-
-=======
-	void OnTriggerEnter(){
-		Destroy(GameObject.FindGameObjectWithTag("Target"));
-		GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (1);
->>>>>>> f0f437e09585f0d934aab97b01a9a58d39ab0e45:Assets/Scripts/PlayerScript.cs
 	}
 
 	void moveToPosition(Vector3 newPosition) {

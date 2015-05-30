@@ -49,12 +49,8 @@
      <Compile Include="Assets\Scripts\ColliderCreator.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets\Scripts\Player.cs" />
-=======
      <Compile Include="Assets\Scripts\GameEnd.cs" />
-     <Compile Include="Assets\Scripts\PlayerScript.cs" />
->>>>>>> f0f437e09585f0d934aab97b01a9a58d39ab0e45
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\StartUp.cs" />
      <Compile Include="Assets\Scripts\TargetManager.cs" />
