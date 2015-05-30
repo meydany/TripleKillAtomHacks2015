@@ -16,7 +16,8 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ScoreText.GetComponent<Text> ().text = score.ToString ();        
+		ScoreText.GetComponent<Text> ().text = score.ToString ();  
+
 	}
 	
 	public void AddScore (int PointsAdded){
@@ -25,5 +26,10 @@ public class Score : MonoBehaviour {
 
 	public void removeScore(int points){
 		score -= points;
+		print ("1");
+		if (score < 0){
+			print ("2");
+			score = 0;
+		} 
 	}
 }
