@@ -22,4 +22,8 @@ public class Score : MonoBehaviour {
 	public void AddScore (int PointsAdded){
 		score += PointsAdded;
 	}
+
+	public void removeScore(int points){
+		score -= points;
+	}
 }

@@ -22,13 +22,18 @@ public class Player : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider collision){
-		print (collision.gameObject.name);
 		if (collision.gameObject.tag == "leftWall" || collision.gameObject.tag == "rightWall" || collision.gameObject.tag == "topWall" || collision.gameObject.tag == "botWall") {
-			print (collision.gameObject.name);
-		} else if (collision.gameObject.tag == "Target") {
-			Destroy (GameObject.FindGameObjectWithTag ("Target"));
-			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (1);
+			//print (collision.gameObject.name);
 		}
+		else if (collision.gameObject.tag == "Target") {
+			Destroy (GameObject.FindGameObjectWithTag ("Target"));
+			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (5);
+		}
+		else if (collision.gameObject.tag == "enemy"){
+			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().removeScore(1);
+			Destroy(collision.gameObject);
+		}
+
 	}
 
 	void moveToPosition(Vector3 newPosition) {

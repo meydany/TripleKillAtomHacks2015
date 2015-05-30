@@ -12,4 +12,9 @@ public class GameEnd : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void endGame(){
+		print ("worked");
+		//Application.loadedLevel ();
+	}
 }

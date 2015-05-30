@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour {
 		else if (TimeLeft <= 0){
 			TimeLeft = 0;
 			// Make sure it only runs once ie. use boolean
-			//gameObject.GetComponent<EndGame>().GameOver();
+			gameObject.GetComponent<GameEnd>().endGame();
 		}
 		TimerText.GetComponent<Text>().text = ((int)TimeLeft).ToString();            
 	}
