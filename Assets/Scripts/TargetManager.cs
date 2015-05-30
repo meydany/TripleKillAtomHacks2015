@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TargetCreation : MonoBehaviour {
+public class TargetManager : MonoBehaviour {
 
 	public GameObject targetPrefab;
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerScript : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	private Vector3 newPosition;
 	private Vector3 currentPosition;
@@ -24,10 +24,15 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(){
-		score += 1;
-		Destroy(GameObject.FindGameObjectWithTag("Target"));
-		print (score);
+	void OnTriggerEnter(Collider collision){
+		print(collision.gameObject.name);
+		if (collision.gameObject.tag == "leftWall" || collision.gameObject.tag == "rightWall" || collision.gameObject.tag == "topWall" || collision.gameObject.tag == "botWall") {
+			print (collision.gameObject.name);
+		} else if(collision.gameObject.tag == "Target"){
+			score += 1;
+			Destroy(GameObject.FindGameObjectWithTag("Target"));
+		}
+
 	}
 
 	void moveToPosition(Vector3 newPosition) {
