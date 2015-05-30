@@ -8,6 +8,9 @@
 -r:'Library/ScriptAssemblies/Assembly-CSharp.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
+-r:'Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll'
+-r:'Assets/Plugins/Photon3Unity3D.dll'
+-r:'Assets/Plugins/WebSocket/websocket-sharp.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.dll'
@@ -17,9 +20,6 @@
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
--r:'Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll'
--r:'Assets/Plugins/Photon3Unity3D.dll'
--r:'Assets/Plugins/WebSocket/websocket-sharp.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -define:UNITY_5_0_2
 -define:UNITY_5_0

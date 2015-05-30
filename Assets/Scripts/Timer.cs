@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		TimeLeft = 60f;
+		TimeLeft = 5f;
 		TimeLeft += 1f;
 		
 		TimerText = GameObject.FindGameObjectWithTag ("TimerText");
@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour {
 		else if (TimeLeft <= 0){
 			TimeLeft = 0;
 			// Make sure it only runs once ie. use boolean
+			print ("running");
 			gameObject.GetComponent<GameEnd>().endGame();
 		}
 		TimerText.GetComponent<Text>().text = ((int)TimeLeft).ToString();            

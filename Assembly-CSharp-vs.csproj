@@ -109,8 +109,10 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\GameEnd.cs" />
+     <Compile Include="Assets\Scripts\GameOverScene.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\ScoreKeeper.cs" />
      <Compile Include="Assets\Scripts\StartUp.cs" />
      <Compile Include="Assets\Scripts\SwitchScenes.cs" />
      <Compile Include="Assets\Scripts\TargetManager.cs" />
