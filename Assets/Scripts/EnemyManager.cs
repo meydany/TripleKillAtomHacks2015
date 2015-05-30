@@ -8,7 +8,7 @@ public class EnemyManager : MonoBehaviour {
 	private float xPos, yPos;
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("createEnemy", 0f, 0.25f);
+		InvokeRepeating ("createEnemy", 0f, 0.5f);
 	}
 	
 	// Update is called once per frame
