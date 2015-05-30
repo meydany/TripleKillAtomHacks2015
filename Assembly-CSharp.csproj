@@ -109,27 +109,25 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\GameEnd.cs" />
+     <Compile Include="Assets\Scripts\Multiplayer Scrips\PhotonNetworkingManager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\StartUp.cs" />
+     <Compile Include="Assets\Scripts\SwitchScenes.cs" />
      <Compile Include="Assets\Scripts\TargetManager.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
-<<<<<<< HEAD
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
-=======
-     <Compile Include="Assets\Scripts\singlePlayerButton.cs" />
->>>>>>> a05c404be76c970705e06244402a150b01040e28
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>/Users/oranluzon/AtomHacks2015/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>/Users/yolimeydan/Documents/AtomHacks2015/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>/Users/oranluzon/AtomHacks2015/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>/Users/yolimeydan/Documents/AtomHacks2015/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
