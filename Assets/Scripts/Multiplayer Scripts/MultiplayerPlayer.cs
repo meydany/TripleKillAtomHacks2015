@@ -53,6 +53,7 @@ public class MultiplayerPlayer : MonoBehaviour {
 
 	[RPC]
 	void moveToPosition(Vector3 newPosition) {
+		print (PhotonNetwork.isMasterClient);
 		currentPosition = gameObject.transform.position;
 		
 		float xDifference = newPosition.x - currentPosition.x;
