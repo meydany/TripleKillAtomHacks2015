@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		moveEnemy ();
+		checkPosition ();
 	}
 
 	void moveEnemy() {
@@ -48,5 +49,13 @@ public class Enemy : MonoBehaviour {
 		enemyPos.y += Time.deltaTime * randomYSpeed;
 		
 		transform.position = enemyPos;
+	}
+
+	void checkPosition() {
+		if (side == SpawnSide.LEFT && gameObject.transform.position.x > Camera.main.orthographicSize * Camera.main.aspect + (GetComponent<Renderer> ().bounds.size.x / 2)) {
+			Destroy (gameObject);
+		} else if (side == SpawnSide.RIGHT && gameObject.transform.position.x < -(Camera.main.orthographicSize * Camera.main.aspect + (GetComponent<Renderer> ().bounds.size.x / 2))) {
+			Destroy (gameObject);
+		}
 	}
 }
