@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ColliderCreator : MonoBehaviour {
 
-
 	public GameObject rightWallPrefab, leftWallPrefab, topWallPrefab, botWallPrefab;
 
 	GameObject rightWall;

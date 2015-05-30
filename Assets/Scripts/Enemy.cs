@@ -7,7 +7,7 @@ public enum SpawnSide {
 }
 public class Enemy : MonoBehaviour {
 	
-	private float randomXPos, randomYPos;
+	public float randomXPos, randomYPos;
 	
 	private float randomSide;
 	
@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour {
 			randomYPos = Random.Range (-Camera.main.orthographicSize, Camera.main.orthographicSize);
 		}
 		
-		Instantiate (gameObject, new Vector3 (randomXPos, randomYPos, 0), Quaternion.identity);
+		//Instantiate (gameObject, new Vector3 (randomXPos, randomYPos, 0), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
