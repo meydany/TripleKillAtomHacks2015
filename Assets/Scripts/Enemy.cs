@@ -27,14 +27,16 @@ public class Enemy : MonoBehaviour {
 
 		if (randomSide < 1) {
 			side = SpawnSide.LEFT;
+			transform.position = new Vector3(-(Camera.main.orthographicSize * Camera.main.aspect + (GetComponent<Renderer>().bounds.size.x /2)), Random.Range(-(Camera.main.orthographicSize), Camera.main.orthographicSize), 0);
 		} else {
 			side = SpawnSide.RIGHT;
+			transform.position = new Vector3((Camera.main.orthographicSize * Camera.main.aspect + (GetComponent<Renderer>().bounds.size.x /2)), Random.Range(-(Camera.main.orthographicSize), Camera.main.orthographicSize), 0);
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		moveEnemy ();
+		//moveEnemy ();
 	}
 
 	void moveEnemy() {
