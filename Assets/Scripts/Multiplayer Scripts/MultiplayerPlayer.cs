@@ -19,24 +19,25 @@ public class MultiplayerPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
+			print ("clicked");
 			newPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
 			moveToPosition (newPosition);
 		}
 	}
 
-	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-	{
-		if (stream.isWriting)
-		{
-			// We own this player: send the others our data
-			stream.SendNext(transform.position);
-		}
-		else
-		{
-			// Network player, receive data
-			this.transform.position = (Vector3) stream.ReceiveNext();
-		}
-	}
+//	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+//	{
+//		if (stream.isWriting)
+//		{
+//			// We own this player: send the others our data
+//			stream.SendNext(transform.position);
+//		}
+//		else
+//		{
+//			// Network player, receive data
+//			this.transform.position = (Vector3) stream.ReceiveNext();
+//		}
+//	}
 	
 	void OnTriggerEnter(Collider collision){
 		if (collision.gameObject.tag == "leftWall" || collision.gameObject.tag == "rightWall" || collision.gameObject.tag == "topWall" || collision.gameObject.tag == "botWall") {
@@ -53,14 +54,14 @@ public class MultiplayerPlayer : MonoBehaviour {
 		
 	}
 
-	[RPC]
+//	[RPC]
 	void moveToPosition(Vector3 newPosition) {
 		if (PhotonNetwork.isMasterClient) {
 			circle = GameObject.FindGameObjectWithTag ("clientPlayer");
 		} else {
 			circle = GameObject.FindGameObjectWithTag ("serverPlayer");
 		}
-		currentPosition = gameObject.transform.position;
+		currentPosition = circle.transform.position;
 		
 		float xDifference = newPosition.x - currentPosition.x;
 		float yDifference = newPosition.y - currentPosition.y;
