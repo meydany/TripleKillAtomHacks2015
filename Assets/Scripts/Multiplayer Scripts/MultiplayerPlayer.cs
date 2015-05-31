@@ -37,7 +37,7 @@ public class MultiplayerPlayer : MonoBehaviour {
 		{
 			// Network player, receive data
 			this.transform.position = (Vector3) stream.ReceiveNext();
-			this.gameObject.GetComponent<Rigidbody>().velocity = Vector3 stream.ReceiveNext();
+			this.gameObject.GetComponent<Rigidbody>().velocity = (Vector3) stream.ReceiveNext();
 		}
 	}
 	
