@@ -25,19 +25,21 @@ public class MultiplayerPlayer : MonoBehaviour {
 		}
 	}
 
-//	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-//	{
-//		if (stream.isWriting)
-//		{
-//			// We own this player: send the others our data
-//			stream.SendNext(transform.position);
-//		}
-//		else
-//		{
-//			// Network player, receive data
-//			this.transform.position = (Vector3) stream.ReceiveNext();
-//		}
-//	}
+	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	{
+		if (stream.isWriting)
+		{
+			// We own this player: send the others our data
+			stream.SendNext(transform.position);
+			stream.SendNext(gameObject.GetComponent<Rigidbody>().velocity 
+		}
+		else
+		{
+			// Network player, receive data
+			this.transform.position = (Vector3) stream.ReceiveNext();
+			this.gameObject.GetComponent<Rigidbody>().velocity = Vector3 stream.ReceiveNext();
+		}
+	}
 	
 	void OnTriggerEnter(Collider collision){
 		if (collision.gameObject.tag == "leftWall" || collision.gameObject.tag == "rightWall" || collision.gameObject.tag == "topWall" || collision.gameObject.tag == "botWall") {
