@@ -19,7 +19,6 @@ public class MultiplayerPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameObject.FindGameObjectWithTag("Manager").GetComponent<MultiplayerConnection>().gameStarted && Input.GetMouseButtonDown (0)) {
-			print ("clicked");
 			newPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
 			moveToPosition (newPosition);
 		}
@@ -31,7 +30,7 @@ public class MultiplayerPlayer : MonoBehaviour {
 		{
 			// We own this player: send the others our data
 			stream.SendNext(transform.position);
-			stream.SendNext(gameObject.GetComponent<Rigidbody>().velocity 
+			stream.SendNext(gameObject.GetComponent<Rigidbody>().velocity);
 		}
 		else
 		{
