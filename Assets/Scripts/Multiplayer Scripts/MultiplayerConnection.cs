@@ -11,6 +11,8 @@ public class MultiplayerConnection : MonoBehaviour {
 
 	public bool gameStarted;
 
+	public bool instantiatedPlayer;
+
 	// Use this for initialization
 	void Start () {
 		PhotonNetwork.autoJoinLobby = false;
@@ -20,6 +22,7 @@ public class MultiplayerConnection : MonoBehaviour {
 		options.maxPlayers = 2;
 
 		gameStarted = false;
+		instantiatedPlayer = false;
 
 		ConnectInUpdate = true;
 		AutoConnect = true;
@@ -41,7 +44,9 @@ public class MultiplayerConnection : MonoBehaviour {
 				gameObject.GetComponent<Timer> ().TimeLeft = 31f;
 			} else {
 				gameStarted = true;
-				gameObject.GetComponent<MultiplayerStartup> ().instantiatePlayer ();
+				if (!instantiatedPlayer && PhotonNetwork.masterClient != null) {
+					gameObject.GetComponent<MultiplayerStartup> ().instantiatePlayer ();
+				}
 			}
 		}
 	}
