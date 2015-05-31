@@ -46,6 +46,7 @@ public class MultiplayerConnection : MonoBehaviour {
 				gameStarted = true;
 				if (!instantiatedPlayer && PhotonNetwork.masterClient != null) {
 					gameObject.GetComponent<MultiplayerStartup> ().instantiatePlayer ();
+					instantiatedPlayer = true;
 				}
 			}
 		}
