@@ -6,10 +6,10 @@ public class MultiplayerConnection : MonoBehaviour {
 	private TypedLobby lobby;
 	private RoomOptions options;
 
-	public bool AutoConnect = true;
-	private bool ConnectInUpdate = true;
+	public bool AutoConnect;
+	private bool ConnectInUpdate;
 
-	public bool gameStarted = false;
+	public bool gameStarted;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,11 @@ public class MultiplayerConnection : MonoBehaviour {
 		options = new RoomOptions();
 		options.isOpen = true;
 		options.maxPlayers = 2;
+
+		gameStarted = false;
+
+		ConnectInUpdate = true;
+		AutoConnect = true;
 	}
 	
 	// Update is called once per frame
@@ -31,10 +36,13 @@ public class MultiplayerConnection : MonoBehaviour {
 				PhotonNetwork.sendRateOnSerialize = 10;
 			}
 		}
-		if (PhotonNetwork.room.playerCount < 2) {
-			gameObject.GetComponent<Timer> ().TimeLeft = 31f;
-		} else {
-			gameStarted = true;
+		if (PhotonNetwork.room != null) {
+			if (PhotonNetwork.room.playerCount < 2) {
+				gameObject.GetComponent<Timer> ().TimeLeft = 31f;
+			} else {
+				gameStarted = true;
+				gameObject.GetComponent<MultiplayerStartup> ().instantiatePlayer ();
+			}
 		}
 	}
 
