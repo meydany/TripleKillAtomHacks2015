@@ -17,9 +17,6 @@ public class MultiplayerStartup : MonoBehaviour {
 	}
 
 	public void OnJoinedRoom() {
-		if (!instantiatedObjects && PhotonNetwork.masterClient != null) {
-			instantiatePlayer ();
-		}
 		/*
 		if (PhotonNetwork.isMasterClient) {
 			ourPlayer.tag = "clientPlayer";
