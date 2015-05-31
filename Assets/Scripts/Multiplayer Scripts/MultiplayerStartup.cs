@@ -18,7 +18,7 @@ public class MultiplayerStartup : MonoBehaviour {
 
 	public void OnJoinedRoom() {
 		if (!instantiatedObjects && PhotonNetwork.masterClient != null) {
-			ourPlayer = (GameObject) PhotonNetwork.Instantiate ("MultiplayerPlayer", new Vector3 (0, 0, 0), Quaternion.identity,0, null);
+			ourPlayer = (GameObject) PhotonNetwork.Instantiate ("MultiplayerPlayer", new Vector3 (0, 2, 0), Quaternion.identity,0, null);
 		}
 		if (PhotonNetwork.isMasterClient) {
 			ourPlayer.tag = "clientPlayer";

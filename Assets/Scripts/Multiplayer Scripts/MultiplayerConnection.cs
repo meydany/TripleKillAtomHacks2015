@@ -9,6 +9,8 @@ public class MultiplayerConnection : MonoBehaviour {
 	public bool AutoConnect = true;
 	private bool ConnectInUpdate = true;
 
+	public bool gameStarted = false;
+
 	// Use this for initialization
 	void Start () {
 		PhotonNetwork.autoJoinLobby = false;
@@ -30,7 +32,9 @@ public class MultiplayerConnection : MonoBehaviour {
 			}
 		}
 		if (PhotonNetwork.room.playerCount < 2) {
-			gameObject.GetComponent<Timer>().TimeLeft = 31f;
+			gameObject.GetComponent<Timer> ().TimeLeft = 31f;
+		} else {
+			gameStarted = true;
 		}
 	}
 
