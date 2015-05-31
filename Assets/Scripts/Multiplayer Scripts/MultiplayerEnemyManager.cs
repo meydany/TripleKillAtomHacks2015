@@ -15,7 +15,7 @@ public class MultiplayerEnemyManager : MonoBehaviour {
 	
 	void createEnemy() {
 		if (PhotonNetwork.isMasterClient) {
-			PhotonNetwork.Instantiate ("MultiplayerEnemy", new Vector3 (0, 0, 0), Quaternion.identity,0,null);
+			//PhotonNetwork.Instantiate ("MultiplayerEnemy", new Vector3 (0, 0, 0), Quaternion.identity,0,null);
 		}
 	}
 }

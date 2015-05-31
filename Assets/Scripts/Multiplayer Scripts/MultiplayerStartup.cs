@@ -28,6 +28,7 @@ public class MultiplayerStartup : MonoBehaviour {
 
 	public void instantiatePlayer(){
 		ourPlayer = (GameObject) PhotonNetwork.Instantiate ("MultiplayerPlayer", new Vector3 (0, 2, 0), Quaternion.identity,0, null);
+		PhotonNetwork.Instantiate ("MultiplayerEnemy", new Vector3 (0, -3, 0), Quaternion.identity,0,null);
 		if (PhotonNetwork.isMasterClient) {
 			ourPlayer.tag = "clientPlayer";
 		} else {
