@@ -14,7 +14,7 @@ public class MultiplayerTargetManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameObject.FindGameObjectWithTag("Target") == null && isThereATarget){
+		if (GameObject.FindGameObjectWithTag("Target") == null && !isThereATarget && PhotonNetwork.inRoom){
 			isThereATarget = true;
 			spawnNewTarget();
 		}
