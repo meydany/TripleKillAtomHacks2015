@@ -13,12 +13,10 @@ public class MultiplayerTargetManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameObject.FindGameObjectWithTag("Target") == null && PhotonNetwork.isMasterClient) {
-			spawnNewTarget();
-		}
+
 	}
 	
-	void spawnNewTarget(){
+	public void spawnNewTarget(){
 		targets = GameObject.FindGameObjectsWithTag ("Target");
 
 		foreach(GameObject target in targets) {
