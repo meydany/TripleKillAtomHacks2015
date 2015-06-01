@@ -46,7 +46,7 @@ public class MultiplayerPlayer : MonoBehaviour {
 		}
 		else if (collision.gameObject.tag == "Target") {
 			Destroy (GameObject.FindGameObjectWithTag ("Target"));
-			GameObject.FindGameObjectWithTag ("Manager").GetComponent<MultiplayerTargetManager>().spawnNewTarget();
+			GameObject.FindGameObjectWithTag("Manager").GetComponent<MultiplayerTargetManager>().isThereATarget = false;
 			GameObject.FindGameObjectWithTag ("Manager").GetComponent<Score> ().AddScore (2);
 		}
 		else if (collision.gameObject.tag == "enemy"){

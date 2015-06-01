@@ -42,6 +42,7 @@ public class MultiplayerConnection : MonoBehaviour {
 		if (PhotonNetwork.room != null) {
 			if (PhotonNetwork.room.playerCount < 2) {
 				gameObject.GetComponent<Timer> ().TimeLeft = 31f;
+				gameStarted = false;
 			} else {
 				gameStarted = true;
 				if (!instantiatedPlayer && PhotonNetwork.masterClient != null) {

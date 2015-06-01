@@ -5,15 +5,19 @@ public class MultiplayerTargetManager : MonoBehaviour {
 	
 	public GameObject targetPrefab;
 	public GameObject[] targets;
+	public bool isThereATarget;
 
 	// Use this for initialization
 	void Start () {
-		
+		isThereATarget = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (GameObject.FindGameObjectWithTag("Target") == null && isThereATarget){
+			isThereATarget = true;
+			spawnNewTarget();
+		}
 	}
 	
 	public void spawnNewTarget(){
