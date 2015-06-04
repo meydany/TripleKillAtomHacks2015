@@ -42,6 +42,7 @@ public class MultiplayerConnectionManager : MonoBehaviour {
 		//checks if game has started yet
 		if (!ConnectInUpdate && PhotonNetwork.inRoom && PhotonNetwork.room.playerCount == options.maxPlayers) {
 			gameStarted = true;
+			print ("GAME STARTED");
 		} 
 	}
 	
@@ -61,7 +62,7 @@ public class MultiplayerConnectionManager : MonoBehaviour {
 	}
 
 	public void OnPhotonPlayerDisconnected() {
-		print ("A player disconnected!");
+		print ("A player disconnected, leaving room");
 		PhotonNetwork.LeaveRoom ();
 	}	
 

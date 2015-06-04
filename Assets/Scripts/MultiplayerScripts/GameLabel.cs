@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WaitingLabel : MonoBehaviour {
-	
-	public GameObject text;
+public class GameLabel : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +11,7 @@ public class WaitingLabel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameObject.FindGameObjectWithTag ("Manager").GetComponent<MultiplayerConnectionManager> ().gameStarted) {
-			Destroy (text);
+			Destroy (gameObject);
 		}
 	}
 }
