@@ -1,11 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Multiplayer Scripts/MultiplayerEnemyManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MultiplayerScripts/MultiplayerConnectionManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Multiplayer Scripts/MultiplayerConnection.cs" Line="50" Column="6" />
-      <File FileName="Assets/Scripts/Multiplayer Scripts/MultiplayerPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Multiplayer Scripts/MultiplayerEnemyManager.cs" Line="18" Column="6" />
-      <File FileName="Assets/Scripts/Multiplayer Scripts/MultiplayerStartup.cs" Line="31" Column="84" />
+      <File FileName="Assets/Scripts/StartUp.cs" Line="11" Column="22" />
+      <File FileName="Assets/Scripts/MultiplayerScripts/MultiplayerConnectionManager.cs" Line="45" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
